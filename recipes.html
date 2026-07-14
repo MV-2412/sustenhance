@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipes | Sustenhance Nutrition & Wellness</title>
+<meta name="description" content="Simple, goal-friendly recipes for weight management, sports nutrition, medical nutrition, and family wellness from Sustenhance.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Petit+Formal+Script&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%237a1730'/%3E%3Ctext x='50' y='68' font-size='55' font-family='Georgia,serif' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Sustenhance</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="assessment.html" class="nav-link">Assessment</a>
+      <a href="recipes.html" class="nav-link" aria-current="page">Recipes</a>
+      <a href="blogs.html" class="nav-link">Blog</a>
+      <a href="calculators.html" class="nav-link">Calculators</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html#booking" class="btn btn-primary nav-cta">Book a Consultation</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-hero container">
+    <p class="eyebrow">Recipes</p>
+    <h1>Simple meals, real goals</h1>
+    <p>No 20-ingredient recipes here, just realistic meals that fit different goals.</p>
+  </div>
+
+  <section class="recipes">
+    <div class="container">
+      <div class="filter-bar" data-target="#recipeGrid">
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="weight">Weight Management</button>
+        <button type="button" class="filter-btn" data-filter="sports">Sports Nutrition</button>
+        <button type="button" class="filter-btn" data-filter="medical">Medical Nutrition</button>
+        <button type="button" class="filter-btn" data-filter="family">Prenatal & Family</button>
+      </div>
+    </div>
+    <div class="container recipe-grid" id="recipeGrid">
+
+      <article class="recipe-card reveal" data-category="weight">
+        <div class="pin-thumb pin-thumb-photo">
+          <img src="images/fruit-bowl.png" alt="Fresh fruit bowl with strawberries, grapes, kiwi, pineapple and banana">
+          <button type="button" class="pin-save" data-id="recipe-yogurt-bowl" aria-label="Save recipe">Save</button>
+        </div>
+        <div class="pin-body">
+        <span class="recipe-tag">Weight Management</span>
+        <h2>High-Protein Greek Yogurt Bowl</h2>
+        <p class="recipe-meta">5 min &nbsp;&middot;&nbsp; 1 serving</p>
+        <p class="recipe-desc">A filling, high-protein breakfast that keeps hunger away for hours, no cooking required.</p>
+        <details>
+          <summary>Ingredients &amp; Instructions</summary>
+          <div class="recipe-details">
+            <h3>Ingredients</h3>
+            <ul>
+              <li>1 cup plain Greek yogurt</li>
+              <li>1 tbsp peanut butter</li>
+              <li>1/2 banana, sliced</li>
+              <li>1 tbsp chia seeds</li>
+              <li>Cinnamon, to taste</li>
+            </ul>
+            <h3>Instructions</h3>
+            <ol>
+              <li>Spoon the yogurt into a bowl.</li>
+              <li>Swirl in the peanut butter.</li>
+              <li>Top with banana slices, chia seeds, and a dash of cinnamon.</li>
+            </ol>
+          </div>
+        </details>
+        </div>
+      </article>
+
+      <article class="recipe-card reveal" data-category="sports">
+        <div class="pin-thumb pin-thumb-2">
+          <span class="pin-letter">C</span>
+          <button type="button" class="pin-save" data-id="recipe-chicken-rice" aria-label="Save recipe">Save</button>
+        </div>
+        <div class="pin-body">
+        <span class="recipe-tag">Sports Nutrition</span>
+        <h2>Post-Workout Chicken &amp; Rice Bowl</h2>
+        <p class="recipe-meta">25 min &nbsp;&middot;&nbsp; 2 servings</p>
+        <p class="recipe-desc">A balanced carb-and-protein bowl to refuel after training, with vegetables for micronutrients.</p>
+        <details>
+          <summary>Ingredients &amp; Instructions</summary>
+          <div class="recipe-details">
+            <h3>Ingredients</h3>
+            <ul>
+              <li>200g chicken breast, diced</li>
+              <li>1 cup cooked rice</li>
+              <li>1 cup steamed broccoli</li>
+              <li>1 tbsp olive oil</li>
+              <li>Salt, pepper, garlic powder, to taste</li>
+            </ul>
+            <h3>Instructions</h3>
+            <ol>
+              <li>Season the chicken and cook in olive oil over medium heat until browned through, about 8–10 minutes.</li>
+              <li>Serve over rice with steamed broccoli on the side.</li>
+            </ol>
+          </div>
+        </details>
+        </div>
+      </article>
+
+      <article class="recipe-card reveal" data-category="medical">
+        <div class="pin-thumb pin-thumb-3">
+          <span class="pin-letter">L</span>
+          <button type="button" class="pin-save" data-id="recipe-chickpea-curry" aria-label="Save recipe">Save</button>
+        </div>
+        <div class="pin-body">
+        <span class="recipe-tag">Medical Nutrition &middot; PCOS-friendly</span>
+        <h2>Low-GI Chickpea &amp; Spinach Curry</h2>
+        <p class="recipe-meta">30 min &nbsp;&middot;&nbsp; 3 servings</p>
+        <p class="recipe-desc">A fibre-rich, low-glycemic-index curry that pairs well with insulin-sensitivity goals.</p>
+        <details>
+          <summary>Ingredients &amp; Instructions</summary>
+          <div class="recipe-details">
+            <h3>Ingredients</h3>
+            <ul>
+              <li>2 cups cooked chickpeas</li>
+              <li>2 cups spinach, chopped</li>
+              <li>1 onion, diced</li>
+              <li>2 tomatoes, pureed</li>
+              <li>1 tsp cumin, 1 tsp turmeric, 1 tsp garam masala</li>
+              <li>1 tbsp oil</li>
+            </ul>
+            <h3>Instructions</h3>
+            <ol>
+              <li>Sauté the onion in oil until golden, then add the spices and cook for 1 minute.</li>
+              <li>Add the tomato puree and simmer for 5 minutes.</li>
+              <li>Add the chickpeas and 1/2 cup water, simmer for 10 minutes.</li>
+              <li>Stir in the spinach and cook until wilted, about 2–3 minutes.</li>
+            </ol>
+          </div>
+        </details>
+        </div>
+      </article>
+
+      <article class="recipe-card reveal" data-category="family">
+        <div class="pin-thumb pin-thumb-4">
+          <span class="pin-letter">O</span>
+          <button type="button" class="pin-save" data-id="recipe-salmon-veggies" aria-label="Save recipe">Save</button>
+        </div>
+        <div class="pin-body">
+        <span class="recipe-tag">Prenatal &amp; Family</span>
+        <h2>One-Pan Salmon &amp; Veggies</h2>
+        <p class="recipe-meta">25 min &nbsp;&middot;&nbsp; 4 servings</p>
+        <p class="recipe-desc">An omega-3-rich, one-pan dinner that's easy to portion for the whole family.</p>
+        <details>
+          <summary>Ingredients &amp; Instructions</summary>
+          <div class="recipe-details">
+            <h3>Ingredients</h3>
+            <ul>
+              <li>4 salmon fillets</li>
+              <li>2 cups baby potatoes, halved</li>
+              <li>1 cup green beans</li>
+              <li>2 tbsp olive oil</li>
+              <li>1 lemon, sliced</li>
+              <li>Salt, pepper, dried herbs, to taste</li>
+            </ul>
+            <h3>Instructions</h3>
+            <ol>
+              <li>Preheat oven to 200°C (400°F).</li>
+              <li>Toss the potatoes in half the oil and roast for 15 minutes on a tray.</li>
+              <li>Add the salmon, green beans, and lemon slices to the tray; drizzle with remaining oil and season.</li>
+              <li>Roast for another 12–15 minutes until the salmon is cooked through.</li>
+            </ol>
+          </div>
+        </details>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-wrap">
+    <div class="footer-brand">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Sustenhance</span>
+      <p>Sustainable nutrition. Lasting wellness.</p>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="services.html">Services</a>
+      <a href="assessment.html">Assessment</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="blogs.html">Blog</a>
+      <a href="calculators.html">Calculators</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <p class="footer-copy">© <span id="year"></span> Sustenhance, <span class="name-script">Meenu Shevetha</span>. All rights reserved.</p>
+    <p class="footer-disclaimer">Content on this site is for general informational purposes and is not a substitute for individualized medical advice.</p>
+  </div>
+</footer>
+
+<a href="#siteHeader" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>

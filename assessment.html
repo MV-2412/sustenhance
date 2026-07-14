@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Nutrition Assessment | Sustenhance</title>
+<meta name="description" content="Take a free 2-minute assessment to find out which Sustenhance nutrition service best fits your goals.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Petit+Formal+Script&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%237a1730'/%3E%3Ctext x='50' y='68' font-size='55' font-family='Georgia,serif' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Sustenhance</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="assessment.html" class="nav-link" aria-current="page">Assessment</a>
+      <a href="recipes.html" class="nav-link">Recipes</a>
+      <a href="blogs.html" class="nav-link">Blog</a>
+      <a href="calculators.html" class="nav-link">Calculators</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html#booking" class="btn btn-primary nav-cta">Book a Consultation</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-hero container">
+    <p class="eyebrow">Free Assessment</p>
+    <h1>Not sure where to start?</h1>
+    <p>Answer four quick questions and get a starting recommendation. Takes about 2 minutes, no email required.</p>
+  </div>
+
+  <section class="assessment">
+    <div class="container assessment-wrap">
+
+      <form id="assessmentForm" class="quiz-card reveal" novalidate>
+        <div class="quiz-progress">
+          <div class="quiz-progress-track"><div class="quiz-progress-fill" id="quizProgressFill"></div></div>
+          <p class="quiz-step-label" id="quizStepLabel">Step 1 of 4</p>
+        </div>
+
+        <div class="quiz-question" data-step="1">
+          <p class="quiz-label">1. What's your main goal right now?</p>
+          <div class="quiz-options">
+            <label><input type="radio" name="goal" value="clinical"> Manage a health condition (diabetes, PCOS, gut, renal, heart, etc.)</label>
+            <label><input type="radio" name="goal" value="sports"> Improve athletic performance (muscle gain, fat loss, recovery)</label>
+            <label><input type="radio" name="goal" value="wellness"> General wellness (weight, pregnancy, paediatric, geriatric, skin &amp; hair)</label>
+            <label><input type="radio" name="goal" value="bespoke"> Something specific, I want a fully custom plan</label>
+            <label><input type="radio" name="goal" value="unsure"> Not sure yet</label>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-step="2" hidden>
+          <p class="quiz-label">2. How would you describe your current eating pattern?</p>
+          <div class="quiz-options">
+            <label><input type="radio" name="pattern" value="structured"> Fairly structured already</label>
+            <label><input type="radio" name="pattern" value="inconsistent"> Inconsistent, some good days, some chaotic ones</label>
+            <label><input type="radio" name="pattern" value="restrictive"> Restrictive, I'm often dieting</label>
+            <label><input type="radio" name="pattern" value="none"> No real plan at all</label>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-step="3" hidden>
+          <p class="quiz-label">3. Do you have a diagnosed medical condition that affects your diet?</p>
+          <div class="quiz-options">
+            <label><input type="radio" name="medical" value="yes"> Yes</label>
+            <label><input type="radio" name="medical" value="no"> No</label>
+          </div>
+        </div>
+
+        <div class="quiz-question" data-step="4" hidden>
+          <p class="quiz-label">4. How soon are you looking to start?</p>
+          <div class="quiz-options">
+            <label><input type="radio" name="timeline" value="asap"> As soon as possible</label>
+            <label><input type="radio" name="timeline" value="month"> Within the next month</label>
+            <label><input type="radio" name="timeline" value="exploring"> Just exploring for now</label>
+          </div>
+        </div>
+
+        <p class="quiz-nudge" id="quizNudge" hidden>Pick an option to continue.</p>
+
+        <div class="quiz-nav">
+          <button type="button" id="quizBackBtn" class="btn btn-ghost" hidden>Back</button>
+          <button type="button" id="quizNextBtn" class="btn btn-primary btn-lg">Next</button>
+        </div>
+      </form>
+
+      <div class="quiz-result-card reveal" id="quizResult" hidden>
+        <p class="eyebrow">Your Recommendation</p>
+        <h2 id="resultTitle"></h2>
+        <p id="resultBody"></p>
+        <div class="quiz-result-actions">
+          <a href="#" id="resultPrimaryCta" class="btn btn-primary btn-lg">See Details</a>
+          <button type="button" id="retakeBtn" class="btn btn-ghost">Retake Assessment</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-wrap">
+    <div class="footer-brand">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Sustenhance</span>
+      <p>Sustainable nutrition. Lasting wellness.</p>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="services.html">Services</a>
+      <a href="assessment.html">Assessment</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="blogs.html">Blog</a>
+      <a href="calculators.html">Calculators</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <p class="footer-copy">© <span id="year"></span> Sustenhance, <span class="name-script">Meenu Shevetha</span>. All rights reserved.</p>
+    <p class="footer-disclaimer">Content on this site is for general informational purposes and is not a substitute for individualized medical advice.</p>
+  </div>
+</footer>
+
+<a href="#siteHeader" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+
+<script src="js/script.js"></script>
+<script src="js/assessment.js"></script>
+</body>
+</html>

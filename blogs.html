@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Sustenhance Nutrition & Wellness</title>
+<meta name="description" content="Evidence-based articles on weight management, sports nutrition, PCOS and medical nutrition, and prenatal & family wellness from Sustenhance.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Petit+Formal+Script&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%237a1730'/%3E%3Ctext x='50' y='68' font-size='55' font-family='Georgia,serif' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Sustenhance</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="assessment.html" class="nav-link">Assessment</a>
+      <a href="recipes.html" class="nav-link">Recipes</a>
+      <a href="blogs.html" class="nav-link" aria-current="page">Blog</a>
+      <a href="calculators.html" class="nav-link">Calculators</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="contact.html#booking" class="btn btn-primary nav-cta">Book a Consultation</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <div class="page-hero container">
+    <p class="eyebrow">The Blog</p>
+    <h1>Evidence-based, no fluff</h1>
+    <p>Articles on nutrition and wellness, written to be useful, not clickbait.</p>
+  </div>
+
+  <section class="blog">
+    <div class="container">
+      <div class="filter-bar" data-target="#blogGrid">
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="weight">Weight Management</button>
+        <button type="button" class="filter-btn" data-filter="sports">Sports Nutrition</button>
+        <button type="button" class="filter-btn" data-filter="medical">Medical Nutrition</button>
+        <button type="button" class="filter-btn" data-filter="family">Family Nutrition</button>
+      </div>
+    </div>
+    <div class="container blog-grid" id="blogGrid">
+
+      <article class="blog-card reveal" data-category="weight">
+        <div class="pin-thumb pin-thumb-1">
+          <span class="pin-letter">U</span>
+          <button type="button" class="pin-save" data-id="blog-undereating" aria-label="Save article">Save</button>
+        </div>
+        <div class="pin-body">
+        <span class="blog-tag">Weight Management</span>
+        <h2>5 Signs You're Under-eating (Not Overeating)</h2>
+        <p class="blog-excerpt">Plateaued progress and constant fatigue are often blamed on "cheating," but for many clients, the real problem is eating too little for too long.</p>
+        <details>
+          <summary>Read more</summary>
+          <p>
+            When weight loss stalls, the instinct is almost always to cut further. But
+            chronic under-eating slows metabolism, disrupts hormones, and makes
+            binge-restrict cycles more likely, not less. Signs to watch for: constant
+            hunger followed by low-energy crashes, poor sleep, irritability around food,
+            losing your period or noticing hormonal shifts, and progress that stalls
+            despite "doing everything right." The fix usually isn't eating less, it's
+            eating enough, consistently, to let your body trust that food is reliable
+            again. A personalized plan accounts for your actual energy needs instead of
+            an arbitrary calorie number pulled from an app.
+          </p>
+        </details>
+        </div>
+      </article>
+
+      <article class="blog-card reveal" data-category="medical">
+        <div class="pin-thumb pin-thumb-2">
+          <span class="pin-letter">P</span>
+          <button type="button" class="pin-save" data-id="blog-pcos-carbs" aria-label="Save article">Save</button>
+        </div>
+        <div class="pin-body">
+        <span class="blog-tag">Medical Nutrition</span>
+        <h2>PCOS and Carbs: Separating Fact from Fear</h2>
+        <p class="blog-excerpt">"Cut all carbs" is common PCOS advice, and it's usually wrong. Here's what actually helps with insulin resistance.</p>
+        <details>
+          <summary>Read more</summary>
+          <p>
+            PCOS is closely linked to insulin resistance, which has led to a lot of
+            blanket "no carbs" advice online. In practice, the type, timing, and pairing
+            of carbohydrates matters far more than eliminating them. Pairing carbs with
+            protein and fibre, spacing meals to avoid long fasting-then-overeating
+            cycles, and prioritizing whole-food carbohydrate sources over ultra-processed
+            ones all support better insulin sensitivity, without the unsustainable
+            restriction that often backfires into bingeing. Every case of PCOS presents
+            differently, so this is a starting framework, not a prescription. Work with
+            a professional to individualize it.
+          </p>
+        </details>
+        </div>
+      </article>
+
+      <article class="blog-card reveal" data-category="sports">
+        <div class="pin-thumb pin-thumb-3">
+          <span class="pin-letter">R</span>
+          <button type="button" class="pin-save" data-id="blog-postworkout" aria-label="Save article">Save</button>
+        </div>
+        <div class="pin-body">
+        <span class="blog-tag">Sports Nutrition</span>
+        <h2>Post-Workout Nutrition: What Actually Matters</h2>
+        <p class="blog-excerpt">The "30-minute anabolic window" is mostly a myth. Here's what to actually prioritize after training.</p>
+        <details>
+          <summary>Read more</summary>
+          <p>
+            Research has walked back the idea that you must eat within 30 minutes of
+            finishing a workout or lose all your gains. What matters more: total daily
+            protein intake, getting a balanced meal within a few hours of training, and
+            rehydrating properly. For most recreational athletes, consistent daily
+            nutrition, enough protein, enough carbohydrate to fuel training, and enough
+            total calories, outweighs the exact timing of any single post-workout meal.
+            Timing becomes more relevant for multi-session training days or competitive
+            athletes, where a coach can help fine-tune it.
+          </p>
+        </details>
+        </div>
+      </article>
+
+      <article class="blog-card reveal" data-category="family">
+        <div class="pin-thumb pin-thumb-4">
+          <span class="pin-letter">N</span>
+          <button type="button" class="pin-save" data-id="blog-postpartum" aria-label="Save article">Save</button>
+        </div>
+        <div class="pin-body">
+        <span class="blog-tag">Family Nutrition</span>
+        <h2>Postpartum Nutrition: Rebuilding Without the Rush</h2>
+        <p class="blog-excerpt">Postpartum bodies aren't a project to "bounce back" from. Nutrition here is about recovery first.</p>
+        <details>
+          <summary>Read more</summary>
+          <p>
+            The postpartum period asks a lot of the body, healing, possibly
+            breastfeeding, and surviving on interrupted sleep. Nutrition advice that
+            pushes rapid weight loss during this window often ignores recovery needs
+            entirely. Prioritizing enough total food (especially protein and iron),
+            simple low-effort meals that survive being eaten one-handed, and hydration
+            matters more here than calorie counting. Weight change, if desired, is a
+            conversation for later, once recovery is stable and, if breastfeeding, milk
+            supply isn't at risk. Every parent's timeline is different, and that's okay.
+          </p>
+        </details>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-wrap">
+    <div class="footer-brand">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Sustenhance</span>
+      <p>Sustainable nutrition. Lasting wellness.</p>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="services.html">Services</a>
+      <a href="assessment.html">Assessment</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="blogs.html">Blog</a>
+      <a href="calculators.html">Calculators</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <p class="footer-copy">© <span id="year"></span> Sustenhance, <span class="name-script">Meenu Shevetha</span>. All rights reserved.</p>
+    <p class="footer-disclaimer">Content on this site is for general informational purposes and is not a substitute for individualized medical advice.</p>
+  </div>
+</footer>
+
+<a href="#siteHeader" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>

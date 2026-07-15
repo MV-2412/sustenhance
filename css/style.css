@@ -390,12 +390,13 @@ section { padding: 96px 0; }
   padding: 72px 24px 56px;
   text-align: center;
   position: relative;
+  z-index: 0;
   overflow: hidden;
   background: var(--paper-deep);
   border-bottom: 1px solid var(--line);
   margin-bottom: 8px;
 }
-.page-hero .pulse-bg { z-index: -1; opacity: 0.12; }
+.page-hero .pulse-bg { z-index: -1; opacity: 0.28; top: 20%; }
 .page-hero .eyebrow { color: var(--sage); }
 .page-hero h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 10px 0 16px; color: var(--ink); }
 .page-hero h1::after {
@@ -423,7 +424,10 @@ section { padding: 96px 0; }
   color: var(--paper);
   padding: 12vh 6%;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
+.cta-final .pulse-bg { opacity: 0.1; top: 20%; }
 .cta-final h2, .cta-final h3 {
   font-family: var(--font-head);
   font-weight: 500;
@@ -431,8 +435,11 @@ section { padding: 96px 0; }
   max-width: 18ch;
   margin: 0 auto;
   color: var(--paper);
+  position: relative;
+  z-index: 2;
 }
-.cta-final p { margin-top: 16px; color: rgba(241, 236, 223, 0.72); font-size: 1.02rem; }
+.cta-final > a, .cta-final > .btn { position: relative; z-index: 2; }
+.cta-final p { margin-top: 16px; color: rgba(241, 236, 223, 0.72); font-size: 1.02rem; position: relative; z-index: 2; }
 .cta-final .btn { margin-top: 30px; }
 
 /* ===================== Founder Hero / Story (homepage) ===================== */
@@ -526,20 +533,17 @@ section { padding: 96px 0; }
 .story-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  column-gap: 44px;
+  row-gap: 32px;
   margin: 2.4em 0;
 }
 .story-box {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 36px 38px;
+  border-top: 2px solid var(--gold);
+  padding-top: 18px;
 }
-.story-box p { margin-bottom: 0; font-size: 1.02rem; }
+.story-box p { margin-bottom: 0; font-size: 1.05rem; }
 @media (max-width: 700px) {
   .story-grid { grid-template-columns: 1fr; }
-  .story-box { padding: 30px 26px; }
 }
 
 .founder-pull { margin: 2.4em auto; text-align: center; max-width: 60ch; }

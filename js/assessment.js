@@ -44,8 +44,16 @@ const retakeBtn = document.getElementById("retakeBtn");
 let current = 0;
 
 function currentStepAnswered() {
-  const inputs = steps[current].querySelectorAll("input[type=radio]");
-  return Array.from(inputs).some((input) => input.checked);
+  const stepEl = steps[current];
+  const radios = stepEl.querySelectorAll("input[type=radio]");
+  if (radios.length) {
+    return Array.from(radios).some((input) => input.checked);
+  }
+  const textInputs = stepEl.querySelectorAll("input[type=text], input[type=email]");
+  if (textInputs.length) {
+    return Array.from(textInputs).every((input) => input.value.trim() !== "" && input.checkValidity());
+  }
+  return true;
 }
 
 function renderStep() {
@@ -60,8 +68,11 @@ function renderStep() {
 function computeResult() {
   const data = new FormData(form);
   const goal = data.get("goal");
+  const pattern = data.get("pattern");
   const medical = data.get("medical");
   const timeline = data.get("timeline");
+  const name = (data.get("fullName") || "").trim();
+  const email = (data.get("contactEmail") || "").trim();
 
   let key = goal;
   if (medical === "yes" && goal !== "clinical") {
@@ -79,13 +90,41 @@ function computeResult() {
   }
 
   resultTitle.textContent = result.title;
-  resultBody.textContent = result.body;
+  resultBody.textContent = result.body + " Meenu will personally review your answers and follow up with a plan tailored to you.";
   resultPrimaryCta.href = result.href;
   resultPrimaryCta.textContent = result.href.startsWith("contact.html") ? "Book a Free Call" : "See Details";
 
   form.hidden = true;
   resultCard.hidden = false;
   resultCard.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  sendResultToMeenu({ name, email, goal, pattern, medical, timeline, recommendation: result.title });
+}
+
+function sendResultToMeenu(details) {
+  const formData = new FormData();
+  formData.append("access_key", "cbc4d079-54af-410a-a662-27e7da53b788");
+  formData.append("subject", "New assessment result from Sust.Enhance website");
+  formData.append("from_name", "Sust.Enhance website");
+  formData.append("Name", details.name);
+  formData.append("Email", details.email);
+  formData.append("Main goal", details.goal || "");
+  formData.append("Eating pattern", details.pattern || "");
+  formData.append("Diagnosed medical condition", details.medical || "");
+  formData.append("Timeline", details.timeline || "");
+  formData.append("Recommendation", details.recommendation || "");
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 12000);
+
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: { Accept: "application/json" },
+    body: formData,
+    signal: controller.signal,
+  })
+    .catch(() => {})
+    .finally(() => clearTimeout(timeout));
 }
 
 nextBtn.addEventListener("click", () => {

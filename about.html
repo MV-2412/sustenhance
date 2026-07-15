@@ -3,170 +3,502 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Meenu | Sustenhance Nutrition & Wellness</title>
-<meta name="description" content="Meet Meenu Shevetha, certified nutritionist and founder of Sustenhance: evidence-based, judgment-free nutrition coaching built around your real life.">
+<title>About Meenu | Sust.Enhance Nutrition & Wellness</title>
+<meta name="description" content="Meet Meenu Shevetha, certified nutritionist and founder of Sust.Enhance: evidence-based, judgment-free nutrition coaching built around your real life.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Petit+Formal+Script&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%237a1730'/%3E%3Ctext x='50' y='68' font-size='55' font-family='Georgia,serif' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23B9822C'/%3E%3Cg transform='translate(10.4,7.1) scale(3.3)' fill='%231E2A20' stroke='none'%3E%3Cpath d='M5 21c8 0 14-6 14-14V5h-2C9 5 5 11 5 19v2Z'/%3E%3C/g%3E%3Cg transform='translate(10.4,7.1) scale(3.3)' fill='none' stroke='%23B9822C' stroke-width='0.8' stroke-linecap='round'%3E%3Cpath d='M5 19c4-6 9-9 14-10'/%3E%3C/g%3E%3C/svg%3E">
 
-<link rel="stylesheet" href="css/style.css">
+<style>
+  :root{
+    --ink:#1E2A20;
+    --ink-soft:#3A4A3D;
+    --paper:#F1ECDF;
+    --paper-deep:#E7DFC8;
+    --gold:#B9822C;
+    --gold-deep:#8F6420;
+    --sage:#52705A;
+    --line:#D6CBAE;
+    --max:700px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit;}
+
+  img{max-width:100%;display:block;}
+
+  .eyebrow{
+    font-family:'Work Sans',sans-serif;
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--sage);
+  }
+
+  /* ---------- HEADER ---------- */
+  .site-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 6%;
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    background:rgba(241,236,223,0.92);
+    backdrop-filter:blur(6px);
+    z-index:50;
+  }
+  .logo{
+    font-family:'Fraunces', serif;
+    font-size:1.3rem;
+    font-weight:500;
+    letter-spacing:0.01em;
+    text-decoration:none;
+  }
+  .logo span{color:var(--gold-deep);}
+  .site-nav{display:flex;align-items:center;gap:30px;font-size:0.85rem;font-weight:500;}
+  .site-nav a{text-decoration:none;opacity:0.75;transition:opacity .2s;}
+  .site-nav a:hover, .site-nav a[aria-current="page"]{opacity:1;}
+  .nav-cta{
+    padding:9px 20px;
+    border:1px solid var(--ink);
+    border-radius:100px;
+    font-size:0.8rem;
+    font-weight:600;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .nav-toggle{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:30px;
+    height:30px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:0;
+  }
+  .nav-toggle span{
+    display:block;
+    height:2px;
+    width:100%;
+    background:var(--ink);
+    transition:transform .25s ease, opacity .25s ease;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  @media (max-width:780px){
+    .site-nav{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:18px;
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background:var(--paper);
+      border-bottom:1px solid var(--line);
+      padding:24px 6% 30px;
+      max-height:0;
+      overflow:hidden;
+      opacity:0;
+      pointer-events:none;
+      transition:max-height .3s ease, opacity .2s ease;
+    }
+    .site-nav.open{max-height:420px;opacity:1;pointer-events:auto;}
+    .nav-toggle{display:flex;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:9vh 6% 8vh;
+    overflow:hidden;
+  }
+  .hero-inner{
+    max-width:1080px;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+  }
+  .pulse-bg{
+    position:absolute;
+    top:8%;
+    left:0;
+    width:100%;
+    opacity:0.16;
+    z-index:1;
+    pointer-events:none;
+  }
+  .hero h1{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:clamp(2.6rem, 6.4vw, 5rem);
+    line-height:1.04;
+    letter-spacing:-0.01em;
+    max-width:11ch;
+    margin-top:18px;
+  }
+  .hero .sub{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(1.1rem, 2vw, 1.45rem);
+    color:var(--ink-soft);
+    max-width:38ch;
+    margin-top:20px;
+  }
+
+  .hero-grid{
+    margin-top:64px;
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:56px;
+    align-items:end;
+  }
+  @media (max-width:780px){
+    .hero-grid{grid-template-columns:1fr;gap:32px;}
+  }
+
+  .portrait-frame{
+    aspect-ratio:3/4;
+    border-radius:6px;
+    overflow:hidden;
+    background:
+      repeating-linear-gradient(135deg, var(--paper-deep) 0 2px, transparent 2px 14px),
+      linear-gradient(160deg, #E5DCC2, #D8CDA9);
+    border:1px solid var(--line);
+    position:relative;
+  }
+  .portrait-frame img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:top center;
+  }
+
+  .founder-id h2{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:1.9rem;
+  }
+  .founder-id .role{
+    margin-top:6px;
+    font-size:0.98rem;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .credential-row{
+    margin-top:22px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .credential-row span{
+    font-size:0.75rem;
+    font-weight:500;
+    padding:7px 14px;
+    border:1px solid var(--line);
+    border-radius:100px;
+    background:var(--paper);
+    white-space:nowrap;
+  }
+  .stat-line{
+    margin-top:26px;
+    font-family:'Fraunces', serif;
+    font-size:1.05rem;
+  }
+  .stat-line b{color:var(--gold-deep); font-weight:600;}
+
+  /* ---------- STORY ---------- */
+  .story{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:14vh 6% 10vh;
+  }
+  .story p{
+    font-size:1.13rem;
+    color:var(--ink-soft);
+    margin-bottom:1.7em;
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .story p.in-view{opacity:1; transform:translateY(0);}
+
+  .pull{
+    margin:2.4em auto;
+    text-align:center;
+    max-width:60ch;
+  }
+  .pull .rule{
+    width:40px;
+    height:1px;
+    background:var(--gold);
+    margin:0 auto 22px;
+  }
+  .pull p{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.3rem, 3vw, 1.75rem);
+    line-height:1.35;
+    color:var(--ink);
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  .pull p.in-view{opacity:1; transform:translateY(0);}
+  .pull .rule-bottom{
+    width:40px;
+    height:1px;
+    background:var(--gold);
+    margin:22px auto 0;
+  }
+
+  /* ---------- CTA ---------- */
+  .cta-final{
+    background:var(--ink);
+    color:var(--paper);
+    padding:12vh 6%;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .cta-final .pulse-bg{
+    opacity:0.08;
+    top:20%;
+  }
+  .cta-final-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0.16;
+    z-index:0;
+    pointer-events:none;
+  }
+  .story-photo{
+    max-width:600px;
+    margin:2.4em auto;
+  }
+  .story-photo img{
+    width:100%;
+    border-radius:6px;
+    border:1px solid var(--line);
+  }
+  .story-photo figcaption{
+    margin-top:12px;
+    text-align:center;
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:0.95rem;
+    color:var(--ink-soft);
+  }
+  .cta-final h3{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:clamp(1.9rem, 4vw, 2.8rem);
+    max-width:16ch;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+  }
+  .cta-final p{
+    margin-top:16px;
+    color:#C9C3AE;
+    font-size:1.05rem;
+    position:relative;
+    z-index:2;
+  }
+  .btn-gold{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-top:38px;
+    padding:16px 34px;
+    background:var(--gold);
+    color:var(--ink);
+    font-weight:600;
+    font-size:0.95rem;
+    border-radius:100px;
+    text-decoration:none;
+    transition:transform .25s ease, background .25s ease;
+    position:relative;
+    z-index:2;
+  }
+  .btn-gold:hover{background:#CDA04A; transform:translateY(-2px);}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:44px 6% 34px;
+    background:var(--paper);
+    border-top:1px solid var(--line);
+  }
+  .footer-wrap{
+    max-width:1080px;
+    margin:0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+  }
+  .footer-brand .logo{display:block;}
+  .footer-brand p{
+    margin-top:8px;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+  .footer-nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 22px;
+    font-size:0.85rem;
+  }
+  .footer-nav a{text-decoration:none; opacity:0.75;}
+  .footer-nav a:hover{opacity:1;}
+  .footer-meta{
+    max-width:1080px;
+    margin:26px auto 0;
+    text-align:center;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+  }
+  .footer-meta p{margin-top:6px;}
+  .footer-meta a{text-decoration:underline;}
+
+  @media (prefers-reduced-motion: reduce){
+    .story p, .pull p{ transition:none; opacity:1; transform:none; }
+    html{scroll-behavior:auto;}
+  }
+</style>
 </head>
 <body>
 
-<!-- ============ HEADER / NAV ============ -->
 <header class="site-header" id="siteHeader">
-  <div class="container nav-wrap">
-    <a href="index.html" class="logo">
-      <span class="logo-mark">S</span>
-      <span class="logo-text">Sustenhance</span>
-    </a>
-
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="assessment.html" class="nav-link">Assessment</a>
-      <a href="recipes.html" class="nav-link">Recipes</a>
-      <a href="blogs.html" class="nav-link">Blog</a>
-      <a href="calculators.html" class="nav-link">Calculators</a>
-      <a href="about.html" class="nav-link" aria-current="page">About</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-      <a href="contact.html#booking" class="btn btn-primary nav-cta">Book a Consultation</a>
-    </nav>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+  <a href="index.html" class="logo">Sust<span>.Enhance</span></a>
+  <nav class="site-nav" id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="assessment.html">Assessment</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="blogs.html">Blog</a>
+    <a href="calculators.html">Calculators</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="contact.html#booking" class="nav-cta">Book a Consultation</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
-<main>
+<section class="hero">
+  <svg class="pulse-bg" viewBox="0 0 1200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,100 C60,100 60,40 120,40 C180,40 180,160 240,160 C300,160 300,60 360,60 C420,60 420,140 480,140 C540,140 540,20 600,20 C660,20 660,180 720,180 C780,180 780,80 840,80 C900,80 900,120 960,120 C1020,120 1020,100 1200,100"
+      fill="none" stroke="#52705A" stroke-width="2"/>
+  </svg>
+  <div class="hero-inner">
+    <span class="eyebrow">Sust.Enhance · Meet the Founder</span>
+    <h1>The body doesn't lie.</h1>
+    <p class="sub">It simply speaks a language we've forgotten how to listen to.</p>
 
-  <div class="page-hero container">
-    <p class="eyebrow">About Sustenhance</p>
-    <h1>Taste your transformation</h1>
-    <p>The story, the philosophy, and the promise behind Meenu Shevetha's practice.</p>
+    <div class="hero-grid">
+      <div class="portrait-frame">
+        <img src="images/meenu-headshot.png" alt="Meenu Shevetha, Founder &amp; Chief Nutritionist">
+      </div>
+      <div class="founder-id">
+        <h2>Meenu Shevetha S.</h2>
+        <p class="role">Founder, Sust.Enhance: Clinical &amp; Sports Nutritionist, Certified Diabetes Educator (India), NASM Certified Health Coach (USA)</p>
+        <div class="credential-row">
+          <span>B.Sc. Clinical Nutrition</span>
+          <span>M.Sc. Sports Nutrition, Gold Medalist</span>
+          <span>CDE (India)</span>
+          <span>NASM Certified Health Coach (USA)</span>
+        </div>
+        <p class="stat-line"><b>1,000+</b> individuals guided across hospitals, sports academies, and private practice</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="story" id="story">
+
+  <p>Hi, I'm <strong>Meenu Shevetha S</strong>, Founder of Sust.Enhance, Clinical &amp; Sports Nutritionist, Certified Diabetes Educator (India), and NASM Certified Health Coach (USA).</p>
+
+  <p>Over the years, I've worked across government hospitals, private healthcare, sports academies, gyms, and nutrition clinics, helping over 1,000 individuals from every walk of life reclaim their health. Every setting taught me something different. But one lesson has stayed with me through all of it:</p>
+
+  <div class="pull">
+    <div class="rule"></div>
+    <p>No two bodies are the same. So no two nutrition journeys should be either.</p>
+    <div class="rule-bottom"></div>
   </div>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="about" id="about">
-    <div class="container about-wrap">
-      <div class="about-visual reveal">
-        <img src="images/meenu-headshot.png" alt="Meenu Shevetha, Founder & Chief Nutritionist" class="about-photo">
-        <div class="about-badge">Founder &amp; Chief Nutritionist</div>
-      </div>
+  <p>I've watched too many people trapped in the cycle of restrictive diets, short-lived results, and quiet self-blame when the plan stopped working. But the truth is simpler than "try harder": most diets ignore hormones, medical history, culture, lifestyle, and emotion, and then blame the person for not fitting the plan.</p>
 
-      <div class="about-copy reveal">
-        <p class="eyebrow">Meet Meenu</p>
-        <h2>Real, practical, and deeply personal</h2>
-        <p>
-          Hi, I'm <span class="name-script">Meenu Shevetha</span>. I'm so glad you're making
-          time to read this! Honestly, I didn't set out to be a nutritionist. I just
-          wanted to feel good in my own body, have energy that lasts, and enjoy food
-          without guilt. That curiosity turned into a career with 6 years of learning
-          both clinical and fitness nutrition. My approach has always stayed the same:
-          real, practical, and deeply personal.
-        </p>
-        <p>
-          I've worked with clients taking their first steps towards health, busy
-          professionals juggling work and wellness, and celebrities and athletes chasing
-          peak performance. What I love most is seeing the shift, not just in numbers on
-          a scale, but in confidence, energy, and how life feels every day.
-        </p>
-        <p>
-          At Sustenhance, it's not about quick fixes. It's about helping you find
-          balance, feel empowered, and create habits that actually stick, because
-          lasting health isn't a diet, it's a way of living you can love.
-        </p>
+  <p>So my work starts differently. I don't hand you a meal plan and ask for discipline. I listen to what your body is trying to communicate, connect the dots, and build something that works <em>with</em> you, not against you.</p>
 
-        <ul class="about-highlights">
-          <li>Founder &amp; Chief Nutritionist, Sustenhance</li>
-          <li>6+ years, clinical &amp; fitness nutrition</li>
-          <li>Real, practical, deeply personal plans, not templates</li>
-          <li>Ongoing support between sessions</li>
-        </ul>
+  <p>I built the science behind that approach through a B.Sc. in Clinical Nutrition, an M.Sc. in Sports Nutrition (Gold Medalist), and certifications as a Certified Diabetes Educator and NASM Health Coach. But if my clients have taught me anything, it's this:</p>
 
-        <p class="signature">Meenu Shevetha</p>
-      </div>
-    </div>
-  </section>
+  <div class="pull">
+    <div class="rule"></div>
+    <p>Credentials build knowledge. Listening builds transformation.</p>
+    <div class="rule-bottom"></div>
+  </div>
 
-  <!-- ============ WHY CHOOSE ============ -->
-  <section class="services">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Why Choose Sustenhance</p>
-        <h2>Clients often tell me...</h2>
-        <p class="section-sub">"Meenu doesn't just change what I eat. She changes how I feel, think, and live every day." That's what drives me: creating lasting change that empowers you every day.</p>
-      </div>
+  <figure class="story-photo">
+    <img src="images/meenu-training.jpg" alt="Meenu Shevetha training at the gym">
+    <figcaption>Sports nutrition isn't theory for me. I train the way I coach.</figcaption>
+  </figure>
 
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="service-icon">P</div>
-          <h3>Personalized Expertise</h3>
-          <p>Recommendations built around your body's unique needs, not a generic plan.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">S</div>
-          <h3>Science-Backed Solutions</h3>
-          <p>Guidance grounded in nutrition science, not trends or fads.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">H</div>
-          <h3>Holistic Wellness</h3>
-          <p>Health that accounts for your whole life, not just what's on your plate.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">C</div>
-          <h3>Continuous Support</h3>
-          <p>You're never left to figure it out alone between sessions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <p>My clients come from very different lives: software professionals managing PCOS on impossible schedules, new mothers rebuilding strength after childbirth, athletes chasing peak performance, people who just want to enjoy food without guilt again. Different stories, but almost every consultation opens with the same sentence: <em>"I'm tired of generic advice that doesn't fit my life."</em> That's exactly where my work begins.</p>
 
-  <!-- ============ PROMISE ============ -->
-  <section class="about">
-    <div class="container about-wrap">
-      <div class="about-visual reveal">
-        <img src="images/notebook-planning.png" alt="Planning a personalized nutrition plan" class="about-photo">
-      </div>
-      <div class="about-copy reveal">
-        <p class="eyebrow">Our Promise to You</p>
-        <h2>Committed to your success</h2>
-        <p>
-          At Sustenhance, we are committed to your success. We believe in the power of
-          nutrition to transform lives, and we are here to support you every step of the
-          way. Our mission is to empower you to conquer your health and wellness goals
-          with confidence, energy, and joy.
-        </p>
-        <p>To see more client transformations and reviews, follow along on Instagram
-        <a href="https://instagram.com/dietician.meenu" target="_blank" rel="noopener">@dietician.meenu</a>.</p>
-      </div>
-    </div>
-  </section>
+  <p>I don't believe healing means giving up the food you grew up loving. I don't believe health should feel like punishment. Nutrition should respect your culture, your schedule, your preferences, and your goals, because sustainable health is built through consistency, not restriction.</p>
 
-  <!-- ============ CTA ============ -->
-  <section class="process">
-    <div class="container" style="text-align:center;">
-      <h2 style="margin-bottom: 20px;">Ready to get started?</h2>
-      <a href="contact.html#booking" class="btn btn-primary btn-lg">Book a Free Discovery Call</a>
-    </div>
-  </section>
+  <p>If you want someone to simply tell you what to eat, I'm probably not the right fit. But if you want someone to help you understand <em>why</em> your body feels the way it does, and guide you there with science, empathy, and honesty. I'd be honoured to walk that road with you.</p>
 
 </main>
 
-<!-- ============ FOOTER ============ -->
-<footer class="site-footer">
-  <div class="container footer-wrap">
+<section class="cta-final">
+  <img src="images/meenu-speaking.jpg" alt="" class="cta-final-bg" aria-hidden="true">
+  <svg class="pulse-bg" viewBox="0 0 1200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,100 C60,100 60,40 120,40 C180,40 180,160 240,160 C300,160 300,60 360,60 C420,60 420,140 480,140 C540,140 540,20 600,20 C660,20 660,180 720,180 C780,180 780,80 840,80 C900,80 900,120 960,120 C1020,120 1020,100 1200,100"
+      fill="none" stroke="#F1ECDF" stroke-width="2"/>
+  </svg>
+  <h3>Welcome to Sust.Enhance.</h3>
+  <p>Let's build a healthier lifestyle that doesn't just work for a few weeks, but lasts a lifetime.</p>
+  <a href="contact.html#booking" class="btn-gold">Start Your Journey →</a>
+</section>
+
+<footer>
+  <div class="footer-wrap">
     <div class="footer-brand">
-      <span class="logo-mark">S</span>
-      <span class="logo-text">Sustenhance</span>
+      <a href="index.html" class="logo">Sust<span>.Enhance</span></a>
       <p>Sustainable nutrition. Lasting wellness.</p>
     </div>
-
     <nav class="footer-nav">
       <a href="services.html">Services</a>
       <a href="assessment.html">Assessment</a>
@@ -176,14 +508,37 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
-
-    <p class="footer-copy">© <span id="year"></span> Sustenhance, <span class="name-script">Meenu Shevetha</span>. All rights reserved.</p>
-    <p class="footer-disclaimer">Content on this site is for general informational purposes and is not a substitute for individualized medical advice.</p>
+  </div>
+  <div class="footer-meta">
+    <p>© <span id="year"></span> Sust.Enhance, Meenu Shevetha. All rights reserved. · <a href="https://instagram.com/dietician.meenu" target="_blank" rel="noopener">@dietician.meenu</a></p>
+    <p>Content on this site is for general informational purposes and is not a substitute for individualized medical advice.</p>
   </div>
 </footer>
 
-<a href="#siteHeader" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-<script src="js/script.js"></script>
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  mainNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const els = document.querySelectorAll('.story p, .pull p');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.2});
+  els.forEach(el=>io.observe(el));
+</script>
+
 </body>
 </html>

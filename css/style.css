@@ -454,6 +454,28 @@ section { padding: 96px 0; }
 /* ===================== Testimonials ===================== */
 .testimonials { background: var(--paper-deep); }
 
+.feedback-gallery {
+  column-count: 3;
+  column-gap: 20px;
+  max-width: 1000px;
+  margin: 48px auto 0;
+}
+.feedback-gallery img {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  break-inside: avoid;
+}
+@media (max-width: 900px) {
+  .feedback-gallery { column-count: 2; }
+}
+@media (max-width: 600px) {
+  .feedback-gallery { column-count: 1; max-width: 420px; }
+}
+
 /* ===================== Client Plates ===================== */
 .client-plates { background: var(--paper-deep); padding-top: 0; }
 .client-plates-grid {

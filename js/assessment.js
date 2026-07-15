@@ -84,7 +84,7 @@ function computeResult() {
   if (timeline === "exploring" && key !== "clinical") {
     result = {
       title: result.title + ", Take Your Time",
-      body: result.body + " Since you're just exploring, feel free to browse the Recipes and Blog first, no pressure to book anything yet.",
+      body: result.body + " Since you're just exploring, feel free to look around the site first, no pressure to book anything yet.",
       href: result.href,
     };
   }

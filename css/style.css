@@ -658,7 +658,7 @@ section { padding: 96px 0; }
 }
 
 /* ===================== Client Plates ===================== */
-.client-plates { background: var(--paper-deep); padding-top: 0; }
+.client-plates { background: var(--paper-deep); }
 .client-plates-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

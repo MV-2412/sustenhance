@@ -390,10 +390,12 @@ section { padding: 96px 0; }
   padding: 72px 24px 56px;
   text-align: center;
   position: relative;
+  overflow: hidden;
   background: var(--paper-deep);
   border-bottom: 1px solid var(--line);
   margin-bottom: 8px;
 }
+.page-hero .pulse-bg { z-index: -1; opacity: 0.12; }
 .page-hero .eyebrow { color: var(--sage); }
 .page-hero h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 10px 0 16px; color: var(--ink); }
 .page-hero h1::after {
@@ -434,7 +436,7 @@ section { padding: 96px 0; }
 .cta-final .btn { margin-top: 30px; }
 
 /* ===================== Founder Hero / Story (homepage) ===================== */
-.founder-hero { position: relative; padding: 9vh 6% 8vh; overflow: hidden; }
+.founder-hero { position: relative; padding: 4vh 6% 8vh; overflow: hidden; }
 .founder-hero-inner { max-width: 1080px; margin: 0 auto; position: relative; z-index: 2; }
 .founder-hero h1 {
   font-family: var(--font-head);
@@ -455,7 +457,7 @@ section { padding: 96px 0; }
   max-width: 38ch;
   margin-top: 20px;
 }
-.founder-hero-grid { margin-top: 64px; display: grid; grid-template-columns: 280px 1fr; gap: 56px; align-items: end; }
+.founder-hero-grid { margin-top: 64px; display: grid; grid-template-columns: 280px 1fr; gap: 56px; align-items: center; }
 @media (max-width: 780px) { .founder-hero-grid { grid-template-columns: 1fr; gap: 32px; } }
 
 .portrait-frame {
@@ -471,18 +473,22 @@ section { padding: 96px 0; }
 .portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 
 .portrait-wrap { position: relative; }
-.portrait-badge {
+.portrait-badges {
   position: absolute;
   bottom: -14px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 20px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.portrait-badge {
   background: var(--white);
-  color: var(--ink);
+  color: var(--gold-deep);
   font-family: var(--font-head);
   font-weight: 600;
   font-size: 0.82rem;
   letter-spacing: 0.03em;
-  padding: 9px 26px;
+  padding: 9px 22px;
   border-radius: 100px;
   box-shadow: var(--shadow-lg);
   white-space: nowrap;
@@ -517,17 +523,23 @@ section { padding: 96px 0; }
   text-align: center;
 }
 
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 2.4em 0;
+}
 .story-box {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 44px 48px;
-  margin: 2.4em 0;
+  padding: 36px 38px;
 }
-.story-box p:last-child { margin-bottom: 0; }
-@media (max-width: 600px) {
-  .story-box { padding: 32px 26px; }
+.story-box p { margin-bottom: 0; font-size: 1.02rem; }
+@media (max-width: 700px) {
+  .story-grid { grid-template-columns: 1fr; }
+  .story-box { padding: 30px 26px; }
 }
 
 .founder-pull { margin: 2.4em auto; text-align: center; max-width: 60ch; }

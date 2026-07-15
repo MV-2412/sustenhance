@@ -47,6 +47,23 @@ body {
 
 header, main, footer { position: relative; z-index: 1; }
 
+/* One flat backdrop per page, each a subtle monochrome-gold gradient variant.
+   Individual section background-colors below are neutralized on these pages
+   so the whole page reads as a single surface instead of alternating blocks. */
+body.page-services { background: linear-gradient(180deg, #F1ECDF 0%, #EAD9B0 100%); }
+body.page-assessment { background: linear-gradient(180deg, #F1ECDF 0%, #F0E3C2 100%); }
+body.page-calculators { background: linear-gradient(180deg, #F1ECDF 0%, #E4D2A0 100%); }
+body.page-testimonials { background: linear-gradient(180deg, #F1ECDF 0%, #ECDCB5 100%); }
+body.page-contact { background: linear-gradient(180deg, #F1ECDF 0%, #E8D7AC 100%); }
+
+body.page-services .services,
+body.page-services .page-hero { background: transparent; }
+body.page-testimonials .testimonials,
+body.page-testimonials .page-hero { background: transparent; }
+body.page-assessment .page-hero,
+body.page-calculators .page-hero,
+body.page-contact .page-hero { background: transparent; }
+
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 11px; }
 ::-webkit-scrollbar-track { background: var(--paper-deep); }
@@ -387,27 +404,24 @@ section { padding: 96px 0; }
 .page-hero {
   max-width: none;
   width: 100%;
-  padding: 72px 24px 56px;
+  padding: 64px 24px 48px;
   text-align: center;
   position: relative;
   z-index: 0;
   overflow: hidden;
-  background: var(--paper-deep);
-  border-bottom: 1px solid var(--line);
-  margin-bottom: 8px;
 }
 .page-hero .pulse-bg { z-index: -1; opacity: 0.28; top: 20%; }
 
-.wave-divider { position: relative; height: 110px; overflow: hidden; }
+.wave-divider { position: relative; height: 72px; overflow: hidden; }
 .wave-divider .pulse-bg {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
   width: 100%;
-  transform: translateY(-50%);
+  height: 100%;
   opacity: 0.22;
 }
-@media (max-width: 700px) { .wave-divider { height: 80px; } }
+@media (max-width: 700px) { .wave-divider { height: 52px; } }
 .page-hero .eyebrow { color: var(--sage); }
 .page-hero h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 10px 0 16px; color: var(--ink); }
 .page-hero h1::after {

@@ -431,6 +431,116 @@ section { padding: 96px 0; }
 .cta-final p { margin-top: 16px; color: rgba(241, 236, 223, 0.72); font-size: 1.02rem; }
 .cta-final .btn { margin-top: 30px; }
 
+/* ===================== Founder Hero / Story (homepage) ===================== */
+.founder-hero { position: relative; padding: 9vh 6% 8vh; overflow: hidden; }
+.founder-hero-inner { max-width: 1080px; margin: 0 auto; position: relative; z-index: 2; }
+.founder-hero h1 {
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: clamp(2.6rem, 6.4vw, 5rem);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  max-width: 11ch;
+  margin-top: 18px;
+  color: var(--ink);
+}
+.founder-hero .sub {
+  font-family: var(--font-head);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  color: var(--ink-soft);
+  max-width: 38ch;
+  margin-top: 20px;
+}
+.founder-hero-grid { margin-top: 64px; display: grid; grid-template-columns: 280px 1fr; gap: 56px; align-items: end; }
+@media (max-width: 780px) { .founder-hero-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.portrait-frame {
+  aspect-ratio: 3 / 4;
+  border-radius: 6px;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(135deg, var(--paper-deep) 0 2px, transparent 2px 14px),
+    linear-gradient(160deg, #E5DCC2, #D8CDA9);
+  border: 1px solid var(--line);
+  position: relative;
+}
+.portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+
+.founder-id h2 { font-family: var(--font-head); font-weight: 500; font-size: 1.9rem; color: var(--ink); }
+.founder-id .role { margin-top: 6px; font-size: 0.98rem; color: var(--ink-soft); max-width: 46ch; }
+.founder-credential-row { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; }
+.founder-credential-row span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: var(--paper);
+  white-space: nowrap;
+}
+.founder-stat-line { margin-top: 26px; font-family: var(--font-head); font-size: 1.05rem; color: var(--ink); }
+.founder-stat-line b { color: var(--gold-deep); font-weight: 600; }
+
+.founder-story { max-width: 700px; margin: 0 auto; padding: 14vh 6% 10vh; }
+.founder-story p { font-size: 1.13rem; color: var(--ink-soft); margin-bottom: 1.7em; }
+
+.founder-pull { margin: 2.4em auto; text-align: center; max-width: 60ch; }
+.founder-rule { width: 40px; height: 1px; background: var(--gold); margin: 0 auto 22px; }
+.founder-pull p {
+  font-family: var(--font-head);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  line-height: 1.35;
+  color: var(--ink);
+}
+.founder-rule-bottom { width: 40px; height: 1px; background: var(--gold); margin: 22px auto 0; }
+
+.founder-story-photo { max-width: 600px; margin: 2.4em auto; }
+.founder-story-photo img { width: 100%; border-radius: 6px; border: 1px solid var(--line); }
+.founder-story-photo figcaption {
+  margin-top: 12px;
+  text-align: center;
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.founder-cta { background: var(--ink); color: var(--paper); padding: 12vh 6%; text-align: center; position: relative; overflow: hidden; }
+.founder-cta .pulse-bg { opacity: 0.08; top: 20%; }
+.founder-cta-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.16; z-index: 0; pointer-events: none; }
+.founder-cta h3 {
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  max-width: 16ch;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  color: var(--paper);
+}
+.founder-cta p { margin-top: 16px; color: #C9C3AE; font-size: 1.05rem; position: relative; z-index: 2; }
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 38px;
+  padding: 16px 34px;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease;
+  position: relative;
+  z-index: 2;
+}
+.btn-gold:hover { background: #CDA04A; transform: translateY(-2px); }
+
 /* ===================== Process ===================== */
 .process-grid {
   display: grid;

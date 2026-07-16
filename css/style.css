@@ -183,17 +183,13 @@ section { padding: 64px 0; }
   height: 78px;
 }
 
-.logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-weight: 500; font-size: 1.35rem; letter-spacing: -0.01em; color: var(--ink); }
+.logo { display: flex; align-items: center; gap: 10px; color: var(--ink); }
 .logo-mark {
-  width: 30px; height: 30px;
-  border-radius: 50%;
-  background: var(--gold);
-  color: var(--ink);
-  display: flex; align-items: center; justify-content: center;
+  height: 44px; width: auto;
+  display: block;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
-.logo-mark svg { width: 16px; height: 16px; }
 .logo:hover .logo-mark { transform: scale(1.08); }
 
 .main-nav { display: flex; align-items: center; gap: 26px; }

@@ -28,7 +28,7 @@ if (contactForm) {
       contactForm.hidden = true;
       if (formSuccess) formSuccess.hidden = false;
     } catch (err) {
-      alert('Something went wrong sending your message. Please try again, or email meenushwe21@gmail.com directly.');
+      alert('Something went wrong sending your message. Please try again, or email dieticianmeenu@gmail.com directly.');
     } finally {
       clearTimeout(timeout);
       submitBtn.disabled = false;

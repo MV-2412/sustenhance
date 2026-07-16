@@ -25,7 +25,7 @@ const ARCHETYPES = {
   },
   unsure: {
     name: "The Open Explorer",
-    service: "a Free Discovery Call",
+    service: "a Discovery Call",
     href: "contact.html#booking",
     intro: "you know something needs to change but haven't landed on a clear goal yet, and that's a completely normal place to start from",
   },
@@ -49,7 +49,7 @@ const PATTERN_NOTES = {
 const URGENCY_NOTES = {
   asap: "You said you want to start as soon as possible, let's get a call on the calendar this week.",
   month: "You're aiming to start within the month. Booking a call now means you're not scrambling to catch up later.",
-  exploring: "You're just exploring for now, no pressure at all. A free call costs nothing and can save you weeks of guessing.",
+  exploring: "You're just exploring for now, no pressure at all. A quick call can still save you weeks of guessing.",
 };
 
 const form = document.getElementById("assessmentForm");

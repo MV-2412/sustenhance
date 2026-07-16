@@ -39,7 +39,7 @@ images/                # photos, logo, favicon, watermark
 ## Real content already wired in
 
 Unlike a template, these are live, not placeholders:
-- Email: `meenushwe21@gmail.com`
+- Email: `dieticianmeenu@gmail.com`
 - WhatsApp: `+91 63794 03186`
 - Instagram: `@dietician.meenu`
 - Booking form and the assessment quiz both submit via [Web3Forms](https://web3forms.com) straight to Meenu's inbox — no backend to maintain.

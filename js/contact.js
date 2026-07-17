@@ -2,6 +2,15 @@ const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 const sendAnotherBtn = document.getElementById('sendAnotherBtn');
 
+const cfDate = document.getElementById('cfDate');
+if (cfDate) {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  cfDate.min = `${yyyy}-${mm}-${dd}`;
+}
+
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();

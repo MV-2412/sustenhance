@@ -599,7 +599,7 @@ section { padding: 64px 0; }
 
 .story-layout {
   display: grid;
-  grid-template-columns: 1fr 1.6fr 1fr;
+  grid-template-columns: 0.85fr 1.9fr 0.85fr;
   column-gap: 32px;
   align-items: center;
   margin: 2.4em 0;

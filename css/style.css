@@ -41,13 +41,19 @@ body {
   font-family: var(--font-body);
   color: var(--ink);
   background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
   background-image: url("../images/logo-watermark.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
   background-size: 420px auto;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+  z-index: -1;
 }
 
 header, main, footer { position: relative; z-index: 1; }

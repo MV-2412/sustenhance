@@ -432,8 +432,16 @@ section { padding: 64px 0; }
 }
 @media (max-width: 700px) { .wave-divider { height: 52px; } }
 .page-hero .eyebrow { color: var(--sage); }
-.page-hero h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 10px 0 16px; color: var(--ink); }
-.page-hero h1::after {
+.page-hero h1 {
+  font-weight: 500;
+  font-size: clamp(2.6rem, 6.4vw, 5rem);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  margin: 18px 0 16px;
+  color: var(--ink);
+}
+.page-hero h1::after,
+.founder-hero h1::after {
   content: "";
   display: block;
   width: 40px;
@@ -441,7 +449,15 @@ section { padding: 64px 0; }
   margin: 18px auto 0;
   background: var(--gold);
 }
-.page-hero p { color: var(--ink-soft); max-width: 620px; margin: 0 auto; font-size: 1.02rem; }
+.founder-hero h1::after { margin: 18px 0 0; }
+.page-hero p {
+  font-family: var(--font-head);
+  font-style: italic;
+  color: var(--ink-soft);
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+}
 .services-banner {
   width: 100%;
   max-height: 340px;
@@ -511,7 +527,7 @@ section { padding: 64px 0; }
   border: 1px solid var(--line);
   position: relative;
 }
-.portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transform: scale(1.12); }
+.portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transform: scale(1.28); }
 
 .portrait-wrap { position: relative; }
 .portrait-badges {

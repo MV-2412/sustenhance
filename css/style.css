@@ -1297,6 +1297,14 @@ section { padding: 64px 0; }
 }
 .calculator-disclaimer { text-align: center; color: var(--ink-soft); font-size: 0.85rem; margin-top: 40px; }
 .calculator-disclaimer a { color: var(--gold-deep); font-weight: 600; text-decoration: underline; }
+.calculators-cta {
+  text-align: center;
+  max-width: 560px;
+  margin: 28px auto 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.calculators-cta p { color: var(--ink); font-size: 1.02rem; margin-bottom: 18px; }
 
 /* ===================== Footer ===================== */
 .site-footer {

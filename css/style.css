@@ -631,12 +631,14 @@ section { padding: 64px 0; }
 .founder-story-photo { margin: 0; }
 .founder-story-photo img { width: 100%; border-radius: 6px; border: 1px solid var(--line); }
 .founder-story-photo figcaption {
-  margin-top: 12px;
+  margin-top: 18px;
   text-align: center;
   font-family: var(--font-head);
   font-style: italic;
-  font-size: 0.95rem;
-  color: var(--ink-soft);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  line-height: 1.35;
+  color: var(--ink);
 }
 
 .founder-cta { background: var(--ink); color: var(--paper); padding: 9vh 6%; text-align: center; position: relative; overflow: hidden; }

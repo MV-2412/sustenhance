@@ -1,5 +1,5 @@
 /* ===================== Variables ===================== */
-/* Editorial paper palette: matches about.html — ink, paper, sage, gold */
+/* Editorial paper palette: matches about.html, ink, paper, sage, gold */
 :root {
   --ink: #1E2A20;
   --ink-soft: #3A4A3D;
@@ -313,7 +313,7 @@ section { padding: 64px 0; }
 .about-copy p { color: var(--ink-soft); margin-bottom: 16px; }
 .about-highlights { margin-top: 20px; display: grid; gap: 10px; }
 .about-highlights li { font-size: 0.95rem; font-weight: 500; padding-left: 18px; position: relative; }
-.about-highlights li::before { content: "—"; position: absolute; left: 0; color: var(--gold); }
+.about-highlights li::before { content: "-"; position: absolute; left: 0; color: var(--gold); }
 .signature { font-family: var(--font-head); font-style: italic; font-size: 1.9rem; color: var(--gold-deep); margin-top: 28px; }
 .name-script { font-family: var(--font-head); font-style: italic; color: var(--gold-deep); }
 

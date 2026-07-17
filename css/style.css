@@ -472,13 +472,14 @@ section { padding: 64px 0; }
   font-size: clamp(1.1rem, 2vw, 1.45rem);
 }
 .services-banner {
+  display: block;
   width: 100%;
-  max-height: 340px;
-  object-fit: cover;
+  max-width: 480px;
+  height: auto;
   border-radius: var(--radius);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
-  margin-bottom: 64px;
+  margin: 0 auto 64px;
 }
 
 /* ===================== CTA band (dark, closing) ===================== */
@@ -582,7 +583,7 @@ section { padding: 64px 0; }
 .founder-stat-line { margin-top: 26px; font-family: var(--font-head); font-size: 1.05rem; color: var(--ink); }
 .founder-stat-line b { color: var(--gold-deep); font-weight: 600; }
 
-.founder-story { max-width: 900px; margin: 0 auto; padding: 6vh 6% 5vh; }
+.founder-story { max-width: 1240px; margin: 0 auto; padding: 6vh 6% 5vh; }
 .founder-story p { font-size: 1.13rem; color: var(--ink-soft); margin-bottom: 1.7em; }
 .founder-story .founder-lede {
   font-family: var(--font-head);
@@ -598,7 +599,7 @@ section { padding: 64px 0; }
 
 .story-layout {
   display: grid;
-  grid-template-columns: 1fr 1.15fr 1fr;
+  grid-template-columns: 1fr 1.6fr 1fr;
   column-gap: 32px;
   align-items: center;
   margin: 2.4em 0;
@@ -607,6 +608,7 @@ section { padding: 64px 0; }
 .story-box {
   border-top: 2px solid var(--gold);
   padding-top: 18px;
+  text-align: center;
 }
 .story-box p { margin-bottom: 0; font-size: 1.05rem; }
 @media (max-width: 900px) {

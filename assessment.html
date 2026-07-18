@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Nutrition Assessment &amp; Calculators | Sust.Enhance</title>
-<meta name="description" content="Take a free 2-minute assessment to find out which Sust.Enhance nutrition service best fits your goals, or use the BMI, calorie, and water intake calculators.">
+<title>Free Nutrition Assessment | Sust.Enhance</title>
+<meta name="description" content="Take a free 2-minute assessment to find out which Sust.Enhance nutrition service best fits your goals.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,8 @@
     <nav class="main-nav" id="mainNav">
       <a href="index.html" class="nav-link">About</a>
       <a href="services.html" class="nav-link">Services</a>
-      <a href="assessment.html" class="nav-link" aria-current="page">Assessment &amp; Tools</a>
+      <a href="assessment.html" class="nav-link" aria-current="page">Assessment</a>
+      <a href="calculators.html" class="nav-link">Calculators</a>
       <a href="testimonials.html" class="nav-link">Testimonials</a>
       <a href="contact.html#booking" class="btn btn-primary nav-cta">Book a Consultation</a>
     </nav>
@@ -147,86 +148,6 @@
     </div>
   </section>
 
-  <section class="calculators" id="calculators">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Free Tools</p>
-        <h2>Or try the nutrition calculators</h2>
-        <p class="section-sub">Quick estimates to get you oriented. These are general guides, not a substitute for a personalized plan.</p>
-      </div>
-
-      <div class="calculator-grid">
-
-        <div class="calculator-card reveal">
-          <h2>BMI Calculator</h2>
-          <p class="calculator-sub">Estimate your Body Mass Index category.</p>
-          <form class="calculator-form" id="bmiForm">
-            <label>Height (cm)
-              <input type="number" id="bmiHeight" min="50" max="272" step="0.1" required>
-            </label>
-            <label>Weight (kg)
-              <input type="number" id="bmiWeight" min="1" max="500" step="0.1" required>
-            </label>
-            <button type="submit" class="btn btn-primary">Calculate BMI</button>
-          </form>
-          <div class="calculator-result" id="bmiResult" hidden></div>
-        </div>
-
-        <div class="calculator-card reveal">
-          <h2>Daily Calorie Needs</h2>
-          <p class="calculator-sub">Mifflin-St Jeor estimate based on your activity level.</p>
-          <form class="calculator-form" id="calorieForm">
-            <label>Sex
-              <select id="calSex">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
-            </label>
-            <label>Age (years)
-              <input type="number" id="calAge" min="10" max="100" required>
-            </label>
-            <label>Height (cm)
-              <input type="number" id="calHeight" min="50" max="272" step="0.1" required>
-            </label>
-            <label>Weight (kg)
-              <input type="number" id="calWeight" min="1" max="500" step="0.1" required>
-            </label>
-            <label>Activity Level
-              <select id="calActivity">
-                <option value="1.2">Sedentary (little/no exercise)</option>
-                <option value="1.375">Light (1-3 days/week)</option>
-                <option value="1.55" selected>Moderate (3-5 days/week)</option>
-                <option value="1.725">Active (6-7 days/week)</option>
-                <option value="1.9">Very Active (physical job/training 2x/day)</option>
-              </select>
-            </label>
-            <button type="submit" class="btn btn-primary">Calculate Calories</button>
-          </form>
-          <div class="calculator-result" id="calorieResult" hidden></div>
-        </div>
-
-        <div class="calculator-card reveal">
-          <h2>Water Intake</h2>
-          <p class="calculator-sub">A general daily hydration estimate based on body weight.</p>
-          <form class="calculator-form" id="waterForm">
-            <label>Weight (kg)
-              <input type="number" id="waterWeight" min="1" max="500" step="0.1" required>
-            </label>
-            <button type="submit" class="btn btn-primary">Calculate Intake</button>
-          </form>
-          <div class="calculator-result" id="waterResult" hidden></div>
-        </div>
-
-      </div>
-
-      <p class="calculator-disclaimer container">These calculators provide general estimates only and don't account for medical conditions, pregnancy, or individual variation.</p>
-
-      <div class="calculators-cta">
-        <p>A number on a screen isn't a plan. Meenu turns these estimates into a strategy built around your body, schedule, and goals, then adjusts it as you progress.</p>
-        <a href="contact.html#booking" class="btn btn-primary btn-lg">Book Your Discovery Call</a>
-      </div>
-    </div>
-  </section>
 
 </main>
 
@@ -235,6 +156,5 @@
 
 <script src="js/script.js"></script>
 <script src="js/assessment.js"></script>
-<script src="js/calculators.js"></script>
 </body>
 </html>

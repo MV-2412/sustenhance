@@ -507,7 +507,7 @@ section { padding: 64px 0; }
 .cta-final .btn { margin-top: 30px; }
 
 /* ===================== Founder Hero / Story (homepage) ===================== */
-.founder-hero { position: relative; padding: 4vh 6% 8vh; overflow: hidden; }
+.founder-hero { position: relative; padding: 1.5vh 6% 8vh; overflow: hidden; }
 .founder-hero-inner { max-width: 1080px; margin: 0 auto; position: relative; z-index: 2; }
 .founder-hero h1 {
   font-family: var(--font-head);
@@ -516,7 +516,7 @@ section { padding: 64px 0; }
   line-height: 1.04;
   letter-spacing: -0.01em;
   max-width: 11ch;
-  margin-top: 18px;
+  margin-top: 0;
   color: var(--ink);
 }
 .founder-hero .sub {

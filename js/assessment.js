@@ -148,7 +148,7 @@ function computeResult() {
 
 function sendResultToMeenu(details) {
   const formData = new FormData();
-  formData.append("access_key", "cbc4d079-54af-410a-a662-27e7da53b788");
+  formData.append("access_key", "f87e6ce4-b73e-4494-8aa3-5562f0c69c91");
   formData.append("subject", "New assessment result from Sust.Enhance website");
   formData.append("from_name", "Sust.Enhance website");
   formData.append("Name", details.name);

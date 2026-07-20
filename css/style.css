@@ -1340,7 +1340,11 @@ section { padding: 64px 0; }
   color: rgba(241, 236, 223, 0.78);
   padding: 56px 0 30px;
   border-top: 1px solid rgba(241, 236, 223, 0.1);
+  position: relative;
+  overflow: hidden;
 }
+.site-footer .pulse-bg { opacity: 0.1; top: 10%; }
+.footer-name { font-family: var(--font-head); font-weight: 500; font-size: 1.4rem; color: var(--paper); }
 .footer-wrap { display: grid; gap: 20px; text-align: center; justify-items: center; }
 .footer-brand { display: flex; flex-direction: column; align-items: center; gap: 4px; }
 .footer-brand .logo-mark { font-size: 1.4rem; }

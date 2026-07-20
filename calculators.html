@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nutrition Calculators | Sust.Enhance</title>
+<title>Health Calculators | Sust.Enhance</title>
 <meta name="description" content="Free BMI, daily calorie needs, and water intake calculators from Sust.Enhance Nutrition.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,8 +26,8 @@
     <nav class="main-nav" id="mainNav">
       <a href="index.html" class="nav-link">About</a>
       <a href="services.html" class="nav-link">Services</a>
-      <a href="assessment.html" class="nav-link">Assessment</a>
-      <a href="calculators.html" class="nav-link" aria-current="page">Calculators</a>
+      <a href="assessment.html" class="nav-link">Nutrition Assessment</a>
+      <a href="calculators.html" class="nav-link" aria-current="page">Health Calculators</a>
       <a href="testimonials.html" class="nav-link">Testimonials</a>
       <a href="contact.html#booking" class="btn btn-primary nav-cta">Book a Consultation</a>
     </nav>
@@ -43,7 +43,7 @@
   <div class="page-hero container">
     <img src="images/meenu-breakfast.jpg" alt="" class="page-hero-photo-bg" aria-hidden="true">
     <p class="eyebrow">Free Tools</p>
-    <h1>Nutrition Calculators</h1>
+    <h1>Health Calculators</h1>
     <p>Quick estimates to get you oriented. These are general guides, not a substitute for a personalized plan.</p>
   </div>
 
@@ -111,9 +111,100 @@
         <div class="calculator-result" id="waterResult" hidden></div>
       </div>
 
+      <div class="calculator-card reveal">
+        <h2>Wellness Age</h2>
+        <p class="calculator-sub">See how your lifestyle habits compare to your actual age.</p>
+        <form class="calculator-form" id="wellnessForm">
+          <label>Age (years)
+            <input type="number" id="wellnessAge" min="10" max="100" required>
+          </label>
+          <label>Exercise Frequency
+            <select id="wellnessExercise">
+              <option value="0">None</option>
+              <option value="1">Light (1-2 days/week)</option>
+              <option value="2">Moderate (3-4 days/week)</option>
+              <option value="3">Active (5+ days/week)</option>
+            </select>
+          </label>
+          <label>Sleep Quality
+            <select id="wellnessSleep">
+              <option value="0">Poor (under 5 hrs or restless)</option>
+              <option value="1">Average (5-7 hrs)</option>
+              <option value="2">Good (7-9 hrs, restful)</option>
+            </select>
+          </label>
+          <label>Typical Diet
+            <select id="wellnessDiet">
+              <option value="0">Mostly processed / fast food</option>
+              <option value="1">A mix of both</option>
+              <option value="2">Mostly whole, home-cooked foods</option>
+            </select>
+          </label>
+          <label>Do you smoke?
+            <select id="wellnessSmoke">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn-primary">Calculate Wellness Age</button>
+        </form>
+        <div class="calculator-result" id="wellnessResult" hidden></div>
+      </div>
+
+      <div class="calculator-card reveal">
+        <h2>Ideal Body Weight</h2>
+        <p class="calculator-sub">Devine formula estimate based on height and sex.</p>
+        <form class="calculator-form" id="ibwForm">
+          <label>Sex
+            <select id="ibwSex">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </label>
+          <label>Height (cm)
+            <input type="number" id="ibwHeight" min="120" max="220" step="0.1" required>
+          </label>
+          <button type="submit" class="btn btn-primary">Calculate Ideal Weight</button>
+        </form>
+        <div class="calculator-result" id="ibwResult" hidden></div>
+      </div>
+
+      <div class="calculator-card reveal">
+        <h2>Fiber Requirements</h2>
+        <p class="calculator-sub">Daily fiber target based on age and sex.</p>
+        <form class="calculator-form" id="fiberForm">
+          <label>Sex
+            <select id="fiberSex">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </label>
+          <label>Age (years)
+            <input type="number" id="fiberAge" min="10" max="100" required>
+          </label>
+          <button type="submit" class="btn btn-primary">Calculate Fiber Needs</button>
+        </form>
+        <div class="calculator-result" id="fiberResult" hidden></div>
+      </div>
+
+      <div class="calculator-card reveal">
+        <h2>Pregnancy Weight Gain</h2>
+        <p class="calculator-sub">Recommended total gain range for a singleton pregnancy, based on pre-pregnancy BMI.</p>
+        <form class="calculator-form" id="pregnancyForm">
+          <label>Pre-Pregnancy Height (cm)
+            <input type="number" id="pregHeight" min="120" max="220" step="0.1" required>
+          </label>
+          <label>Pre-Pregnancy Weight (kg)
+            <input type="number" id="pregWeight" min="30" max="250" step="0.1" required>
+          </label>
+          <button type="submit" class="btn btn-primary">Calculate Recommended Gain</button>
+        </form>
+        <div class="calculator-result" id="pregnancyResult" hidden></div>
+      </div>
+
     </div>
 
-    <p class="calculator-disclaimer container">These calculators provide general estimates only and don't account for medical conditions, pregnancy, or individual variation.</p>
+    <p class="calculator-disclaimer container">These calculators provide general estimates only and don't account for medical conditions, pregnancy (aside from the pregnancy calculator), or individual variation.</p>
 
     <div class="calculators-cta">
       <p>A number on a screen isn't a plan. Meenu turns these estimates into a strategy built around your body, schedule, and goals, then adjusts it as you progress.</p>

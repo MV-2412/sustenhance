@@ -78,7 +78,7 @@ function currentStepAnswered() {
   if (radios.length) {
     return Array.from(radios).some((input) => input.checked);
   }
-  const textInputs = stepEl.querySelectorAll("input[type=text], input[type=email]");
+  const textInputs = stepEl.querySelectorAll("input[type=text], input[type=email], input[type=tel]");
   if (textInputs.length) {
     return Array.from(textInputs).every((input) => input.value.trim() !== "" && input.checkValidity());
   }
@@ -103,6 +103,7 @@ function computeResult() {
   const timeline = data.get("timeline");
   const name = (data.get("fullName") || "").trim();
   const email = (data.get("contactEmail") || "").trim();
+  const phone = (data.get("contactPhone") || "").trim();
 
   let key = goal;
   let medicalOverride = false;
@@ -142,7 +143,7 @@ function computeResult() {
   resultCard.hidden = false;
   resultCard.scrollIntoView({ behavior: "smooth", block: "start" });
 
-  sendResultToMeenu({ name, email, goal, pattern, barrier, medical, timeline, recommendation: archetype.service, profile: archetype.name });
+  sendResultToMeenu({ name, email, phone, goal, pattern, barrier, medical, timeline, recommendation: archetype.service, profile: archetype.name });
 }
 
 function sendResultToMeenu(details) {
@@ -152,6 +153,7 @@ function sendResultToMeenu(details) {
   formData.append("from_name", "Sust.Enhance website");
   formData.append("Name", details.name);
   formData.append("Email", details.email);
+  formData.append("Phone", details.phone);
   formData.append("Main goal", details.goal || "");
   formData.append("Eating pattern", details.pattern || "");
   formData.append("Biggest barrier", details.barrier || "");

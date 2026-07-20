@@ -129,3 +129,89 @@ document.getElementById("waterForm").addEventListener("submit", (e) => {
     fill.style.height = `${fillPct}%`;
   });
 });
+
+document.getElementById("wellnessForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const age = parseFloat(document.getElementById("wellnessAge").value);
+  const exercise = parseInt(document.getElementById("wellnessExercise").value, 10);
+  const sleep = parseInt(document.getElementById("wellnessSleep").value, 10);
+  const diet = parseInt(document.getElementById("wellnessDiet").value, 10);
+  const smokes = document.getElementById("wellnessSmoke").value === "yes";
+
+  const exerciseAdjust = { 0: 3, 1: 1, 2: -1, 3: -3 }[exercise];
+  const sleepAdjust = { 0: 3, 1: 0, 2: -2 }[sleep];
+  const dietAdjust = { 0: 3, 1: 0, 2: -2 }[diet];
+  const smokeAdjust = smokes ? 5 : 0;
+
+  const wellnessAge = Math.max(18, Math.round(age + exerciseAdjust + sleepAdjust + dietAdjust + smokeAdjust));
+  const diff = wellnessAge - age;
+
+  let message;
+  if (diff <= -3) message = "Your habits are working in your favor, keep it up.";
+  else if (diff < 3) message = "Your habits roughly match your actual age.";
+  else message = "There's real room to close this gap with a few consistent changes.";
+
+  const result = document.getElementById("wellnessResult");
+  result.hidden = false;
+  result.innerHTML = `
+    <p class="calculator-result-text"><strong>${wellnessAge} years</strong> estimated wellness age, vs your actual age of ${age}.</p>
+    <p class="calculator-note">${message} This is a rough lifestyle indicator, not a medical or biological age test.</p>
+  `;
+});
+
+document.getElementById("ibwForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const sex = document.getElementById("ibwSex").value;
+  const heightCm = parseFloat(document.getElementById("ibwHeight").value);
+  const heightIn = heightCm / 2.54;
+  const base = sex === "male" ? 50 : 45.5;
+  const overBase = Math.max(0, heightIn - 60);
+  const ibw = base + 2.3 * overBase;
+  const rangeLow = ibw * 0.9;
+  const rangeHigh = ibw * 1.1;
+
+  const result = document.getElementById("ibwResult");
+  result.hidden = false;
+  result.innerHTML = `
+    <p class="calculator-result-text"><strong>~${ibw.toFixed(1)} kg</strong><br>healthy range: ${rangeLow.toFixed(1)}-${rangeHigh.toFixed(1)} kg</p>
+    <p class="calculator-note">Based on the Devine formula. It doesn't account for muscle mass, frame size, or build, an athletic or larger-framed body can be healthy well outside this range.</p>
+  `;
+});
+
+document.getElementById("fiberForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const sex = document.getElementById("fiberSex").value;
+  const age = parseFloat(document.getElementById("fiberAge").value);
+
+  let grams;
+  if (sex === "male") grams = age <= 50 ? 38 : 30;
+  else grams = age <= 50 ? 25 : 21;
+
+  const result = document.getElementById("fiberResult");
+  result.hidden = false;
+  result.innerHTML = `
+    <p class="calculator-result-text"><strong>~${grams} g/day</strong></p>
+    <p class="calculator-note">Roughly the fiber in 5-6 servings of vegetables, fruit, and whole grains combined. Increase gradually and drink enough water alongside it to avoid digestive discomfort.</p>
+  `;
+});
+
+document.getElementById("pregnancyForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const heightCm = parseFloat(document.getElementById("pregHeight").value);
+  const weightKg = parseFloat(document.getElementById("pregWeight").value);
+  const heightM = heightCm / 100;
+  const bmi = weightKg / (heightM * heightM);
+
+  let category, gainLow, gainHigh;
+  if (bmi < 18.5) { category = "Underweight"; gainLow = 12.5; gainHigh = 18; }
+  else if (bmi < 25) { category = "Normal weight"; gainLow = 11.5; gainHigh = 16; }
+  else if (bmi < 30) { category = "Overweight"; gainLow = 7; gainHigh = 11.5; }
+  else { category = "Obese"; gainLow = 5; gainHigh = 9; }
+
+  const result = document.getElementById("pregnancyResult");
+  result.hidden = false;
+  result.innerHTML = `
+    <p class="calculator-result-text"><strong>${gainLow}-${gainHigh} kg</strong> total recommended gain<br>pre-pregnancy category: ${category}</p>
+    <p class="calculator-note">Based on IOM guidelines for a singleton pregnancy. Most of this gain happens in the 2nd and 3rd trimesters, roughly 0.3-0.5 kg per week. Twin pregnancies and individual medical history change these numbers, always confirm with your OB and a dietician.</p>
+  `;
+});

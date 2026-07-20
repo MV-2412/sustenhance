@@ -856,6 +856,14 @@ section { padding: 64px 0; }
 }
 .contact-info h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin: 8px 0 14px; }
 .contact-info p { color: var(--ink-soft); margin-bottom: 24px; }
+.contact-portrait {
+  width: 100%;
+  max-width: 340px;
+  margin-top: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
 .contact-list { display: grid; gap: 14px; }
 .contact-list li { font-size: 0.95rem; }
 .contact-list a:hover { color: var(--gold-deep); text-decoration: underline; }
@@ -1303,6 +1311,26 @@ section { padding: 64px 0; }
   margin: 28px auto 0;
   padding-top: 28px;
   border-top: 1px solid var(--line);
+}
+
+.tool-cta { background: var(--paper-deep); padding: 8vh 6%; }
+.tool-cta-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 48px;
+  align-items: center;
+}
+.tool-cta-photo {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.tool-cta-text h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 14px; color: var(--ink); }
+.tool-cta-text p { color: var(--ink-soft); margin-bottom: 24px; font-size: 1.02rem; }
+@media (max-width: 780px) {
+  .tool-cta-grid { grid-template-columns: 1fr; text-align: center; }
+  .tool-cta-photo { max-width: 320px; margin: 0 auto; }
 }
 .calculators-cta p { color: var(--ink); font-size: 1.02rem; margin-bottom: 18px; }
 

@@ -1181,20 +1181,34 @@ section { padding: 64px 0; }
 .btn-link-retake:hover { color: var(--ink); }
 
 /* ===================== Calculators ===================== */
-.calculator-grid {
-  column-count: 3;
-  column-gap: 24px;
-}
-.calculator-card {
+.calculator-accordion { max-width: 760px; margin: 0 auto; display: grid; gap: 14px; }
+.calculator-item {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 28px;
-  break-inside: avoid;
-  margin-bottom: 24px;
+  padding: 22px 26px;
 }
-.calculator-card h2 { font-size: 1.15rem; margin-bottom: 6px; }
-.calculator-sub { color: var(--ink-soft); font-size: 0.88rem; margin-bottom: 20px; }
+.calculator-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.calculator-item summary::-webkit-details-marker { display: none; }
+.calculator-item summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  color: var(--gold-deep);
+  flex-shrink: 0;
+}
+.calculator-item[open] summary::after { content: "\2212"; }
+.calculator-item-heading { display: flex; flex-direction: column; gap: 4px; }
+.calculator-item-title { font-family: var(--font-head); font-weight: 500; font-size: 1.15rem; color: var(--ink); }
+.calculator-item-sub { font-size: 0.85rem; font-weight: 400; color: var(--ink-soft); }
+.calculator-item[open] summary { margin-bottom: 22px; }
+.calculator-item-body { padding-top: 4px; }
 .calculator-form { display: grid; gap: 14px; }
 .calculator-form label { font-size: 0.85rem; font-weight: 500; color: var(--ink-soft); display: grid; gap: 6px; }
 .calculator-form input,

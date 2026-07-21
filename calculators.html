@@ -63,158 +63,200 @@
   </section>
 
   <section class="calculators">
-    <div class="container calculator-grid">
+    <div class="container calculator-accordion">
 
-      <div class="calculator-card reveal">
-        <h2>BMI Calculator</h2>
-        <p class="calculator-sub">Estimate your Body Mass Index category.</p>
-        <form class="calculator-form" id="bmiForm">
-          <label>Height (cm)
-            <input type="number" id="bmiHeight" min="50" max="272" step="0.1" required>
-          </label>
-          <label>Weight (kg)
-            <input type="number" id="bmiWeight" min="1" max="500" step="0.1" required>
-          </label>
-          <button type="submit" class="btn btn-primary">Calculate BMI</button>
-        </form>
-        <div class="calculator-result" id="bmiResult" hidden></div>
-      </div>
+      <details class="calculator-item reveal">
+        <summary>
+          <span class="calculator-item-heading">
+            <span class="calculator-item-title">BMI Calculator</span>
+            <span class="calculator-item-sub">Estimate your Body Mass Index category.</span>
+          </span>
+        </summary>
+        <div class="calculator-item-body">
+          <form class="calculator-form" id="bmiForm">
+            <label>Height (cm)
+              <input type="number" id="bmiHeight" min="50" max="272" step="0.1" required>
+            </label>
+            <label>Weight (kg)
+              <input type="number" id="bmiWeight" min="1" max="500" step="0.1" required>
+            </label>
+            <button type="submit" class="btn btn-primary">Calculate BMI</button>
+          </form>
+          <div class="calculator-result" id="bmiResult" hidden></div>
+        </div>
+      </details>
 
-      <div class="calculator-card reveal">
-        <h2>Daily Calorie Needs</h2>
-        <p class="calculator-sub">Mifflin-St Jeor estimate based on your activity level.</p>
-        <form class="calculator-form" id="calorieForm">
-          <label>Sex
-            <select id="calSex">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </label>
-          <label>Age (years)
-            <input type="number" id="calAge" min="10" max="100" required>
-          </label>
-          <label>Height (cm)
-            <input type="number" id="calHeight" min="50" max="272" step="0.1" required>
-          </label>
-          <label>Weight (kg)
-            <input type="number" id="calWeight" min="1" max="500" step="0.1" required>
-          </label>
-          <label>Activity Level
-            <select id="calActivity">
-              <option value="1.2">Sedentary (little/no exercise)</option>
-              <option value="1.375">Light (1-3 days/week)</option>
-              <option value="1.55" selected>Moderate (3-5 days/week)</option>
-              <option value="1.725">Active (6-7 days/week)</option>
-              <option value="1.9">Very Active (physical job/training 2x/day)</option>
-            </select>
-          </label>
-          <button type="submit" class="btn btn-primary">Calculate Calories</button>
-        </form>
-        <div class="calculator-result" id="calorieResult" hidden></div>
-      </div>
+      <details class="calculator-item reveal">
+        <summary>
+          <span class="calculator-item-heading">
+            <span class="calculator-item-title">Daily Calorie Needs</span>
+            <span class="calculator-item-sub">Mifflin-St Jeor estimate based on your activity level.</span>
+          </span>
+        </summary>
+        <div class="calculator-item-body">
+          <form class="calculator-form" id="calorieForm">
+            <label>Sex
+              <select id="calSex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </label>
+            <label>Age (years)
+              <input type="number" id="calAge" min="10" max="100" required>
+            </label>
+            <label>Height (cm)
+              <input type="number" id="calHeight" min="50" max="272" step="0.1" required>
+            </label>
+            <label>Weight (kg)
+              <input type="number" id="calWeight" min="1" max="500" step="0.1" required>
+            </label>
+            <label>Activity Level
+              <select id="calActivity">
+                <option value="1.2">Sedentary (little/no exercise)</option>
+                <option value="1.375">Light (1-3 days/week)</option>
+                <option value="1.55" selected>Moderate (3-5 days/week)</option>
+                <option value="1.725">Active (6-7 days/week)</option>
+                <option value="1.9">Very Active (physical job/training 2x/day)</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn-primary">Calculate Calories</button>
+          </form>
+          <div class="calculator-result" id="calorieResult" hidden></div>
+        </div>
+      </details>
 
-      <div class="calculator-card reveal">
-        <h2>Water Intake</h2>
-        <p class="calculator-sub">A general daily hydration estimate based on body weight.</p>
-        <form class="calculator-form" id="waterForm">
-          <label>Weight (kg)
-            <input type="number" id="waterWeight" min="1" max="500" step="0.1" required>
-          </label>
-          <button type="submit" class="btn btn-primary">Calculate Intake</button>
-        </form>
-        <div class="calculator-result" id="waterResult" hidden></div>
-      </div>
+      <details class="calculator-item reveal">
+        <summary>
+          <span class="calculator-item-heading">
+            <span class="calculator-item-title">Water Intake</span>
+            <span class="calculator-item-sub">A general daily hydration estimate based on body weight.</span>
+          </span>
+        </summary>
+        <div class="calculator-item-body">
+          <form class="calculator-form" id="waterForm">
+            <label>Weight (kg)
+              <input type="number" id="waterWeight" min="1" max="500" step="0.1" required>
+            </label>
+            <button type="submit" class="btn btn-primary">Calculate Intake</button>
+          </form>
+          <div class="calculator-result" id="waterResult" hidden></div>
+        </div>
+      </details>
 
-      <div class="calculator-card reveal">
-        <h2>Wellness Age</h2>
-        <p class="calculator-sub">See how your lifestyle habits compare to your actual age.</p>
-        <form class="calculator-form" id="wellnessForm">
-          <label>Age (years)
-            <input type="number" id="wellnessAge" min="10" max="100" required>
-          </label>
-          <label>Exercise Frequency
-            <select id="wellnessExercise">
-              <option value="0">None</option>
-              <option value="1">Light (1-2 days/week)</option>
-              <option value="2">Moderate (3-4 days/week)</option>
-              <option value="3">Active (5+ days/week)</option>
-            </select>
-          </label>
-          <label>Sleep Quality
-            <select id="wellnessSleep">
-              <option value="0">Poor (under 5 hrs or restless)</option>
-              <option value="1">Average (5-7 hrs)</option>
-              <option value="2">Good (7-9 hrs, restful)</option>
-            </select>
-          </label>
-          <label>Typical Diet
-            <select id="wellnessDiet">
-              <option value="0">Mostly processed / fast food</option>
-              <option value="1">A mix of both</option>
-              <option value="2">Mostly whole, home-cooked foods</option>
-            </select>
-          </label>
-          <label>Do you smoke?
-            <select id="wellnessSmoke">
-              <option value="no">No</option>
-              <option value="yes">Yes</option>
-            </select>
-          </label>
-          <button type="submit" class="btn btn-primary">Calculate Wellness Age</button>
-        </form>
-        <div class="calculator-result" id="wellnessResult" hidden></div>
-      </div>
+      <details class="calculator-item reveal">
+        <summary>
+          <span class="calculator-item-heading">
+            <span class="calculator-item-title">Wellness Age</span>
+            <span class="calculator-item-sub">See how your lifestyle habits compare to your actual age.</span>
+          </span>
+        </summary>
+        <div class="calculator-item-body">
+          <form class="calculator-form" id="wellnessForm">
+            <label>Age (years)
+              <input type="number" id="wellnessAge" min="10" max="100" required>
+            </label>
+            <label>Exercise Frequency
+              <select id="wellnessExercise">
+                <option value="0">None</option>
+                <option value="1">Light (1-2 days/week)</option>
+                <option value="2">Moderate (3-4 days/week)</option>
+                <option value="3">Active (5+ days/week)</option>
+              </select>
+            </label>
+            <label>Sleep Quality
+              <select id="wellnessSleep">
+                <option value="0">Poor (under 5 hrs or restless)</option>
+                <option value="1">Average (5-7 hrs)</option>
+                <option value="2">Good (7-9 hrs, restful)</option>
+              </select>
+            </label>
+            <label>Typical Diet
+              <select id="wellnessDiet">
+                <option value="0">Mostly processed / fast food</option>
+                <option value="1">A mix of both</option>
+                <option value="2">Mostly whole, home-cooked foods</option>
+              </select>
+            </label>
+            <label>Do you smoke?
+              <select id="wellnessSmoke">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn-primary">Calculate Wellness Age</button>
+          </form>
+          <div class="calculator-result" id="wellnessResult" hidden></div>
+        </div>
+      </details>
 
-      <div class="calculator-card reveal">
-        <h2>Ideal Body Weight</h2>
-        <p class="calculator-sub">Devine formula estimate based on height and sex.</p>
-        <form class="calculator-form" id="ibwForm">
-          <label>Sex
-            <select id="ibwSex">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </label>
-          <label>Height (cm)
-            <input type="number" id="ibwHeight" min="120" max="220" step="0.1" required>
-          </label>
-          <button type="submit" class="btn btn-primary">Calculate Ideal Weight</button>
-        </form>
-        <div class="calculator-result" id="ibwResult" hidden></div>
-      </div>
+      <details class="calculator-item reveal">
+        <summary>
+          <span class="calculator-item-heading">
+            <span class="calculator-item-title">Ideal Body Weight</span>
+            <span class="calculator-item-sub">Devine formula estimate based on height and sex.</span>
+          </span>
+        </summary>
+        <div class="calculator-item-body">
+          <form class="calculator-form" id="ibwForm">
+            <label>Sex
+              <select id="ibwSex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </label>
+            <label>Height (cm)
+              <input type="number" id="ibwHeight" min="120" max="220" step="0.1" required>
+            </label>
+            <button type="submit" class="btn btn-primary">Calculate Ideal Weight</button>
+          </form>
+          <div class="calculator-result" id="ibwResult" hidden></div>
+        </div>
+      </details>
 
-      <div class="calculator-card reveal">
-        <h2>Fiber Requirements</h2>
-        <p class="calculator-sub">Daily fiber target based on age and sex.</p>
-        <form class="calculator-form" id="fiberForm">
-          <label>Sex
-            <select id="fiberSex">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </label>
-          <label>Age (years)
-            <input type="number" id="fiberAge" min="10" max="100" required>
-          </label>
-          <button type="submit" class="btn btn-primary">Calculate Fiber Needs</button>
-        </form>
-        <div class="calculator-result" id="fiberResult" hidden></div>
-      </div>
+      <details class="calculator-item reveal">
+        <summary>
+          <span class="calculator-item-heading">
+            <span class="calculator-item-title">Fiber Requirements</span>
+            <span class="calculator-item-sub">Daily fiber target based on age and sex.</span>
+          </span>
+        </summary>
+        <div class="calculator-item-body">
+          <form class="calculator-form" id="fiberForm">
+            <label>Sex
+              <select id="fiberSex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </label>
+            <label>Age (years)
+              <input type="number" id="fiberAge" min="10" max="100" required>
+            </label>
+            <button type="submit" class="btn btn-primary">Calculate Fiber Needs</button>
+          </form>
+          <div class="calculator-result" id="fiberResult" hidden></div>
+        </div>
+      </details>
 
-      <div class="calculator-card reveal">
-        <h2>Pregnancy Weight Gain</h2>
-        <p class="calculator-sub">Recommended total gain range for a singleton pregnancy, based on pre-pregnancy BMI.</p>
-        <form class="calculator-form" id="pregnancyForm">
-          <label>Pre-Pregnancy Height (cm)
-            <input type="number" id="pregHeight" min="120" max="220" step="0.1" required>
-          </label>
-          <label>Pre-Pregnancy Weight (kg)
-            <input type="number" id="pregWeight" min="30" max="250" step="0.1" required>
-          </label>
-          <button type="submit" class="btn btn-primary">Calculate Recommended Gain</button>
-        </form>
-        <div class="calculator-result" id="pregnancyResult" hidden></div>
-      </div>
+      <details class="calculator-item reveal">
+        <summary>
+          <span class="calculator-item-heading">
+            <span class="calculator-item-title">Pregnancy Weight Gain</span>
+            <span class="calculator-item-sub">Recommended total gain range for a singleton pregnancy, based on pre-pregnancy BMI.</span>
+          </span>
+        </summary>
+        <div class="calculator-item-body">
+          <form class="calculator-form" id="pregnancyForm">
+            <label>Pre-Pregnancy Height (cm)
+              <input type="number" id="pregHeight" min="120" max="220" step="0.1" required>
+            </label>
+            <label>Pre-Pregnancy Weight (kg)
+              <input type="number" id="pregWeight" min="30" max="250" step="0.1" required>
+            </label>
+            <button type="submit" class="btn btn-primary">Calculate Recommended Gain</button>
+          </form>
+          <div class="calculator-result" id="pregnancyResult" hidden></div>
+        </div>
+      </details>
 
     </div>
 

@@ -573,7 +573,7 @@ section { padding: 64px 0; }
 .founder-stat-line { margin-top: 26px; font-family: var(--font-head); font-size: 1.05rem; color: var(--ink); }
 .founder-stat-line b { color: var(--gold-deep); font-weight: 600; }
 
-.founder-story { max-width: 1240px; margin: 0 auto; padding: 6vh 6% 5vh; }
+.founder-story { max-width: 1240px; margin: 0 auto; padding: 4vh 6% 3vh; }
 .founder-story p { font-size: 1.13rem; color: var(--ink-soft); margin-bottom: 1.7em; }
 .founder-story .founder-lede {
   font-family: var(--font-head);
@@ -590,21 +590,21 @@ section { padding: 64px 0; }
 .story-layout {
   display: grid;
   grid-template-columns: 0.85fr 1.9fr 0.85fr;
-  column-gap: 32px;
+  column-gap: 18px;
   align-items: center;
-  margin: 2.4em 0;
+  margin: 1.6em 0;
 }
-.story-col { display: grid; row-gap: 32px; }
+.story-col { display: grid; row-gap: 16px; }
 .story-box {
   background: var(--surface);
   border: 1px solid var(--line);
   border-top: 3px solid var(--gold);
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   box-shadow: var(--shadow);
-  padding: 24px 22px;
+  padding: 18px 18px;
   text-align: center;
 }
-.story-box p { margin-bottom: 0; font-size: 1.05rem; }
+.story-box p { margin-bottom: 0; font-size: 0.98rem; }
 @media (max-width: 900px) {
   .story-layout { grid-template-columns: 1fr; row-gap: 32px; }
   .founder-story-photo { max-width: 420px; margin: 0 auto; }
